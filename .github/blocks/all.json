@@ -1,10 +1,6 @@
 {
-  "docs/base/bad.go": {
+  "*.go": {
     "default": "Krzysztof-Cieslak__IDE-Block__ide-block"
-  },
-  "docs/io/io.go": {
-    "default": "Krzysztof-Cieslak__IDE-Block__ide-block"
-  },
   "": {
     "default": "githubnext__blocks-examples__overview"
   }
