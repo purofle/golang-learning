@@ -99,6 +99,49 @@ func (s *Shit) init() *Shit {
 }
 ```
 
+### 接口
+
+Go 的接口与结构体相似（？），但是里面的 member 是函数，声明如下：
+
+```go
+type interface_name interface {
+  method_name() result
+}
+```
+
+Go 还有一种东西叫做空接口，可以直接用 `interface{}` 声明，空接口类似于 Kotlin 中的 `Any?` 类型，可以承载任何类型。
+
+## new 和 make
+
+`new` 和 `make` 关键词都用于分配一片内存空间，如下图：
+
+```mermaid
+graph LR;
+    make--内置数据类型-->初始化-->分配内存-->pointer;
+    new--其他类型-->不初始化-->分配内存-->pointer;
+```
+
+这里注意，`new` 出来的 `struct` 里的 member 都是空值：
+
+```go
+shit := new(Shit)
+
+fmt.Printf("%T\n", shit.Color)
+fmt.Println(shit.Color)
+```
+
+输出结果为：
+
+```
+string
+
+```
+
+不难看出，`shit.Color` 为空值。
+
+## 条件表达式
+
+<!--TODO-->
 
 ### 引用/声明
 

@@ -21,4 +21,16 @@ func (s *Shit) init() *Shit {
 
 func main() {
 	fmt.Println(Shit{Color: "green", Taste: "rotten eggs"}.eat())
+
+	var i interface{}
+
+	shit := new(Shit)
+
+	fmt.Printf("%T\n", shit.Color)
+	fmt.Println(shit.Color)
+
+	i = nil
+	i = 1
+
+	fmt.Println(i)
 }
