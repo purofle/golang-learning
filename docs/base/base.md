@@ -43,6 +43,63 @@ func func_name(parammeter type) return_type {
 }
 ```
 
+### defer 关键词
+
+使用 `defer` 关键词的表达式会在函数返回之前进行调用。
+
+### OOP
+
+#### 结构体
+
+Go 的结构体定义如下：
+
+```go
+type struct_name struct {
+    name type
+}
+```
+
+结构体可以被初始化：
+
+```go
+type Shit struct {
+    Color string
+    Taste string
+}
+```
+
+结构体可以有他的方法，是这么定义的：
+
+```go
+func (recv type) methodName(parameter_list) (return_value_list) { … }
+```
+
+一个完整的例子：
+
+```go
+type Shit struct {
+	Color string
+	Taste string
+}
+
+func (s Shit) eat() string {
+	return fmt.Sprintf("You ate a %s shit! It smells like %s", s.Color, s.Taste)
+}
+
+func main() {
+	fmt.Println(Shit{Color: "green", Taste: "rotten eggs"}.eat())
+}
+```
+
+我们还可以利用指针，声明出类似于其他语言的 OOP 中的*静态函数*。
+
+```go
+func (s *Shit) init() *Shit {
+	return &Shit{Color: "green", Taste: "rotten eggs"}
+}
+```
+
+
 ### 引用/声明
 
 <div id="refer" />
