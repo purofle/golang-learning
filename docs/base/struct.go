@@ -19,6 +19,12 @@ func (s *Shit) init() *Shit {
 	return &Shit{Color: "green", Taste: "rotten eggs"}
 }
 
+func test(nmsl int) func(int) int {
+	return func(nmsl int) int {
+		return nmsl
+	}
+}
+
 func main() {
 	fmt.Println(Shit{Color: "green", Taste: "rotten eggs"}.eat())
 
