@@ -3,6 +3,7 @@
 本小节来学习基本语法。
 
 ### 注释
+
 Go 的注释使用 `//` 或者 `/**/` 来声明，与大多数语言一致，变量内的内容不会被编译。同时 Go 的注释还能起到类似于注解的作用(?)
 
 ### 变量
@@ -78,16 +79,16 @@ func (recv type) methodName(parameter_list) (return_value_list) { … }
 
 ```go
 type Shit struct {
-	Color string
-	Taste string
+ Color string
+ Taste string
 }
 
 func (s Shit) eat() string {
-	return fmt.Sprintf("You ate a %s shit! It smells like %s", s.Color, s.Taste)
+ return fmt.Sprintf("You ate a %s shit! It smells like %s", s.Color, s.Taste)
 }
 
 func main() {
-	fmt.Println(Shit{Color: "green", Taste: "rotten eggs"}.eat())
+ fmt.Println(Shit{Color: "green", Taste: "rotten eggs"}.eat())
 }
 ```
 
@@ -95,7 +96,7 @@ func main() {
 
 ```go
 func (s *Shit) init() *Shit {
-	return &Shit{Color: "green", Taste: "rotten eggs"}
+ return &Shit{Color: "green", Taste: "rotten eggs"}
 }
 ```
 
